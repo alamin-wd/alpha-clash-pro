@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -16,16 +16,16 @@
 <body>
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- Home Section -->
-        <section class="home min-h-screen flex justify-center items-center text-white hidden">
+        <section id="home" class=" min-h-screen flex justify-center items-center text-white">
             <div class="flex flex-col justify-center items-center gap-4">
                 <h1 class="text-7xl font-extrabold">Alphabet Clash</h1>
                 <p class="text-xl mb-4">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="text-lg text-black bg-white btn btn-active btn-secondary">Play Now</button>
+                <button onclick="play()" class="text-lg text-black bg-white btn btn-active btn-secondary">Play Now</button>
             </div>
         </section>
 
         <!-- Play Ground Section -->
-        <section class="play-ground hidden">
+        <section id="play-ground" class=" hidden">
             <div class="flex flex-col justify-center items-center gap-8 py-8">
                 <!-- Screen -->
                 <div class="flex justify-center mr-8">
@@ -36,6 +36,9 @@
                         <div
                             class="w-2/4 bg-[#2F2941] flex justify-center mx-auto pb-4 text-white text-xl rounded-b-xl">
                             <p>Don't watch keyboard while playing...</p>
+                        </div>
+                        <div class="flex justify-center items-center h-full ">
+                            <p id="current-alphabet" class="text-black text-9xl font-bold uppercase mb-12">Y</p>
                         </div>
 
                     </div>
@@ -120,7 +123,7 @@
         </section>
 
         <!-- Score Section -->
-        <section class="score min-h-screen flex justify-center items-center">
+        <section class="score min-h-screen flex justify-center items-center hidden">
             <div class="w-96 h-60 gap-6 flex flex-col justify-center items-center text-white border rounded-2xl  bg-gradient-to-r from-indigo-500">
                 <h2 class="text-6xl font-bold">Score: <span>0</span></h2>
                 <button class="btn md:btn-md bg-white hover:bg-indigo-500 text-black text-xl">Play Again</button>
@@ -128,6 +131,7 @@
             </div>
         </section>
     </main>
+    <script src="js/utility.js"></script>
     <script src="js/index.js"></script>
 </body>
 
